@@ -5,12 +5,8 @@ public class DaoFactory {
 
     public static Ads getAdsDao() {
         if (adsDao == null) {
-            try {
-                Config config = new Config();
-                adsDao = new MySQLAdsDao(config);
-            } catch(SQLException e) {
-                e.printStackTrace();
-            }
+            Config config = new Config();
+            adsDao = new MySQLAdsDao(config);
         }
         return adsDao;
     }

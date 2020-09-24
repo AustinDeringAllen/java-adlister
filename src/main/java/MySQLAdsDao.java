@@ -9,7 +9,7 @@ import java.util.List;
 public class MySQLAdsDao implements Ads {
     private Connection connection;
 
-    public MySQLAdsDao(Config config) throws SQLException {
+    public MySQLAdsDao(Config config) {
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
