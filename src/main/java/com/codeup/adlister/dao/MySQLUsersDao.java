@@ -2,6 +2,7 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
+import config.Config;
 
 import java.sql.*;
 
@@ -47,6 +48,7 @@ public class MySQLUsersDao implements Users {
             rs.next();
             return rs.getLong(1);
         } catch (SQLException e) {
+            e.printStackTrace();
             throw new RuntimeException("Error creating new user", e);
         }
     }
